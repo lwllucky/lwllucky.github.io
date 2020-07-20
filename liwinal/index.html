@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <!-- 编写软件vscode -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 广告栏 -->
+    <span id="advertisement">
+        <img id="img1" src="./image/advertisement.jpg" alt="" title="广告栏">
+        <!-- 轮番播放 -->
+        <script>
+            window.onload = function () {
+                var img1 = document.getElementById("img1");
+                var imgArr = ["./image/2.jpg", "./image/3.jpg", "./image/advertisement.jpg"]
+                var index = 0;
+
+                setInterval(function () {
+                    index++;
+                    if (index >= imgArr.length) {
+                        index = 0;
+                    }
+
+                    img1.src = imgArr[index];
+
+                }, 1000);
+            };
+        </script>
+    </span>
+    <div id="h">我的博客---仿菜鸟界面</div>
+    <!-- 第一栏 -->
+    <header id="header">
+
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="">诚斋笔记</a></li>
+            <li><a href="">git</a></li>
+            <li><a href="">前端</a></li>
+            <li><a href="">后端</a></li>
+        </ul>
+    </header>
+    <!-- 侧边栏 -->
+    <aside id="body1">
+        <!-- 第一部分 -->
+        <span class="b1">
+            <!-- liwinal -->
+            <div class="bb1">
+                <a href="liwanli/liwanli.html" target="_blank"><img src="./image/myheader.png" alt="" width="100px"
+                        height="100px"><br>liwinallucky</a>
+            </div>
+            <!-- liyuhua -->
+            <div class="bb2">
+                <a href="liyuhua"><img src="./image/liyuhua.jpg" alt="" width="100px" height="100px"><br>长烟一空</a>
+            </div>
+        </span>
+    </aside>
+    <!-- 主文部分 -->
+    <section id="body2">
+        <article class="a1">
+            <a href="#1">HTML教程</a>
+            <p>这个讲述的是HTML的用法</p>
+            <p>HTML 是用来描述网页的一种语言。</p>
+            <ul>
+                <li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)</li>
+                <li>HTML 不是一种编程语言，而是一种标记语言 (markup language)</li>
+                <li>标记语言是一套标记标签 (markup tag)</li>
+                <li>HTML 使用标记标签来描述网页</li>
+            </ul>
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#2">css教程</a>
+            <p>这是css的使用教程</p>
+            <p>CSS 概述</p>
+            <ul>
+                <li>CSS 指层叠样式表 (Cascading Style Sheets)</li>
+                <li>样式定义如何显示 HTML 元素</li>
+                <li>样式通常存储在样式表中</li>
+                <li>把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题</li>
+                <li>外部样式表可以极大提高工作效率</li>
+                <li>外部样式表通常存储在 CSS 文件中</li>
+                <li>多个样式定义可层叠为一</li>
+            </ul>
+
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#3">javascript教程</a>
+            <p>这是javascript的教程</p>
+            <ul>
+                <li>JavaScript 能够改变 HTML 内容</li>
+                <li>JavaScript 能够改变 HTML 属性</li>
+                <li>JavaScript 能够改变 HTML 样式 (CSS)</li>
+                <li>JavaScript 能够隐藏 HTML 元素</li>
+                <li>JavaScript 能够显示 HTML 元素</li>
+            </ul>
+        </article>
+    </section>
+    <!-- 正文 -->
+    <div id="body3">
+        <a name="1"></a>
+        <h3>HTML标签使用</h3>
+        <p>这是w3c的笔记，官方链接<a href="https://www.w3school.com.cn/html/html_attributes.asp">w3school</a></p>
+        <h4>标签，只有几个，无顺序</h4>
+        <p>HTML 标题（Heading）是通过&lt;h1&gt; - &lt;h6&gt; 等标签进行定义的。<br>
+            HTML 段落是通过&lt;p&gt;标签进行定义的。<br>
+            HTML 链接是通过&lt;a&gt;标签进行定义的。<br>
+            HTML 图像是通过 &lt;img&gt; 标签进行定义的。<br>
+        </p>
+        <h4>表格</h4>
+        <p>
+            &lt;table&gt;--&gt;&lt;tr&gt;--&gt;&lt;td&gt;<br>
+            表头用&lt;th&gt;数据用&lt;td&gt;<br>
+            显示边框在table里面写属性border="1"
+        <table border="1">
+            <caption>表格标签说明</caption>
+            <tr>
+                <th>表格</th>
+                <th>描述</th>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>定义表格</td>
+            </tr>
+            <tr>
+                <td>&lt;caption&gt;</td>
+                <td>定义表格标题</td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>定义表格的表头</td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>定义表格的行</td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>定义表格单元</td>
+            </tr>
+            <tr>
+                <td>&lt;thead&gt;</td>
+                <td>定义表格的页眉</td>
+            </tr>
+            <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>定义表格的主体</td>
+            </tr>
+            <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>定义表格的页脚</td>
+            </tr>
+            <tr>
+                <td>&lt;col&gt;</td>
+                <td>定义用于表格列的属性</td>
+            </tr>
+            <tr>
+                <td>&lt;colgroup&gt;</td>
+                <td>定义表格列的组</td>
+            </tr>
+        </table>
+        原样代码：<br>
+        <xmp>
+            <table border="1">
+                <caption>表格标签说明</caption>
+                <tr>
+                    <th>表格</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>定义表格</td>
+                </tr>
+                <tr>
+                    <td>&lt;caption&gt;</td>
+                    <td>定义表格标题</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>定义表格的表头</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>定义表格的行</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>定义表格单元</td>
+                </tr>
+                <tr>
+                    <td>&lt;thead&gt;</td>
+                    <td>定义表格的页眉</td>
+                </tr>
+                <tr>
+                    <td>&lt;tbody&gt;</td>
+                    <td>定义表格的主体</td>
+                </tr>
+                <tr>
+                    <td>&lt;tfoot&gt;</td>
+                    <td>定义表格的页脚</td>
+                </tr>
+                <tr>
+                    <td>&lt;col&gt;</td>
+                    <td>定义用于表格列的属性</td>
+                </tr>
+                <tr>
+                    <td>&lt;colgroup&gt;</td>
+                    <td>定义表格列的组</td>
+                </tr>
+            </table>
+        </xmp>
+
+        </p>
+        <h4>列表</h4>
+        <p>
+            有序列表&lt;ol&gt;--&gt;&lt;li&gt;<br>
+            无序列表&lt;ul&gt;--&gt;&lt;li&gt;<br>
+            定义列表<br>
+            自定义列表不仅仅是一列项目，而是项目及其注释的组合。<br>
+            自定义列表以&lt;dl&gt;标签开始。每个自定义列表项以&lt;dt&gt;开始。每个自定义列表项的定义以&lt;dd&gt;开始。<br>
+            例：<xmp>
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                </dl>
+            </xmp>
+            结果：
+        <dl>
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+        </dl>
+        </p>
+
+
+        <br>
+        <a name="2"></a>
+        <h3>css教程</h3>
+        <br>
+        <a name="3"></a>
+        <h3>javascript教程</h3>
+        <br>
+    </div>
+
+    <!-- 脚尾 -->
+    <footer id="footer">
+        <a href="###">友情链接</a><br><br>
+        <a href="">关于我们</a>
+    </footer>
+</body>
+
+</html>
