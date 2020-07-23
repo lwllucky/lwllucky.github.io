@@ -105,10 +105,13 @@ a{
     color: #f10515;
 }
 #body3{
-    background-color: #b1aaad;
+    background-color: #b6aeb1;
 }
 #body3 a{
     color: #6484a5;
+}
+#body3 b{
+    color: #617f10;
 }
 #body3 a:hover{
     color: #dcb896;
@@ -122,4 +125,7 @@ a{
 }
 #footer a:hover{
     color: #37446d;
+}
+#footer p{
+    color: #212847;
 }
