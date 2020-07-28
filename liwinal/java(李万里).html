@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <!-- 编写软件vscode -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客java主页</title>
+    <link rel="stylesheet" href="style(李万里).css">
+</head>
+
+<body>
+    <!-- 广告栏 -->
+    <span id="advertisement">
+        <img id="img1" src="./image/advertisement.jpg" alt="" title="广告栏">
+        <!-- 轮番播放 -->
+        <script>
+            window.onload = function () {
+                var img1 = document.getElementById("img1");
+                var imgArr = ["./image/2.jpg", "./image/3.jpg", "./image/advertisement.jpg"];
+                var index = 0;
+
+                setInterval(function () {
+                    index++;
+                    if (index >= imgArr.length) {
+                        index = 0;
+                    }
+
+                    img1.src = imgArr[index];
+
+                }, 1000);
+            };
+        </script>
+    </span>
+    <div id="h">我的博客---仿菜鸟界面---只写了部分java，后期可维护</div>
+    <!-- 第一栏 -->
+    <header id="header">
+        <ul>
+            <li><a href="index(李万里).html">首页</a></li>
+            <li><a href="liwanli/liwanli(李万里).html">诚斋</a></li>
+            <li><a href="git(李万里).html">git</a></li>
+            <li><a href="index(李万里).html">前端</a></li>
+            <li><a href="java(李万里).html">java</a></li>
+        </ul>
+    </header>
+    <!-- 侧边栏 -->
+    <aside id="body1">
+        <!-- 第一部分 -->
+        <span class="b1">
+            <!-- liwinal -->
+            <div class="bb1">
+                <a href="liwanli/liwanli(李万里).html" target="_blank"><img src="./image/myheader.png" alt="" width="100px"
+                        height="100px"><br>liwinallucky</a>
+            </div>
+            <!-- liyuhua -->
+            <div class="bb2">
+                <a href="liyuhua"><img src="./image/liyuhua.jpg" alt="" width="100px" height="100px"><br>长烟一空</a>
+            </div>
+        </span>
+    </aside>
+    <!-- 主文部分 -->
+    <section id="body2">
+        <article class="a1">
+            <a href="#1">java对象和类</a>
+            <p>java是一种面向对象语言，万物对象化</p>
+            <p>只写了一部分，如下</p>
+            <ul>
+                <li>对象和类</li>
+                <li>多态</li>
+                <li>继承</li>
+                <li>封装</li>
+                <li>抽象</li>
+            </ul>
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#2">String&StringBuilder&StringBuffer</a>
+            <p>关于String的用法</p>
+            <p>因为是写的菜鸟上面的笔记，所以可以直接看菜鸟教程，我写的就不是很完整</p>
+            <ul>
+                <li>String类</li>
+                <li>StringBuffer类</li>
+                <li>StringBuilder类</li>
+            </ul>
+
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#3">泛型</a>
+            <p>就是可以定义自己想定义的类型</p>
+            <ul>
+                <li>泛型方法</li>
+                <li>泛型类</li>
+                <li>类型通配符</li>
+            </ul>
+        </article>
+    </section>
+    <!-- 正文 -->
+    <div id="body3">
+        <a name="1"></a>
+        <h3>java对象和类</h3>
+        <p>万物对象化，官方链接<a href="https://www.runoob.com/java/java-object-classes.html">菜鸟教程</a></p>
+        <h4>对象和类</h4>
+        <p>
+            <b>对象：</b>对象是类的一个实例（对象不是找个女朋友），有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。<br>
+            <b>类：</b>类是一个模板，它描述一类对象的行为和状态。
+        </p>
+        <h4>多态</h4>
+        <p>多态是同一个行为具有多个不同表现形式或形态的能力。<br>
+            多态就是同一个接口，使用不同的实例而执行不同操作，如图所示：<br>
+            <img src="./image/dt-java.png" alt=""><br>
+            多态性是对象多种表现形式的体现。<br>
+            <b>多态的优点</b><br>
+            1. 消除类型之间的耦合关系<br>
+            2. 可替换性<br>
+            3. 可扩充性<br>
+            4. 接口性<br>
+            5. 灵活性<br>
+            6. 简化性<br>
+            <b>多态存在的三个必要条件</b><br>
+            继承<br>
+            重写<br>
+            父类引用指向子类对象<br>
+            比如：<br>
+            Parent p = new Child();
+        </p>
+        <h4>继承</h4>
+        <p>
+            继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。<br>
+            继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。<br>
+            生活中的继承：<br>
+            <img src="./image/14B0951E-FC75-47A3-B611-4E1883887339.jpg" alt=""><br>
+            兔子和羊属于食草动物类，狮子和豹属于食肉动物类。<br>
+            食草动物和食肉动物又是属于动物类。<br>
+            所以继承需要符合的关系是：is-a，父类更通用，子类更具体。<br>
+            虽然食草动物和食肉动物都是属于动物，但是两者的属性和行为上有差别，所以子类会具有父类的一般特性也会具有自身的特性。<br>
+            <b>类的继承格式</b><br>
+            在 Java 中通过 extends 关键字可以申明一个类是从另外一个类继承而来的，一般形式如下：<br>
+        <pre>
+                class 父类 {
+                }
+    
+                class 子类 extends 父类 {
+                }
+            </pre>
+        </p>
+        <h4>封装</h4>
+        <p>
+            在面向对象程式设计方法中，封装（英语：Encapsulation）是指一种将抽象性函式接口的实现细节部分包装、隐藏起来的方法。<br>
+            封装可以被认为是一个保护屏障，防止该类的代码和数据被外部类定义的代码随机访问。<br>
+            要访问该类的代码和数据，必须通过严格的接口控制。<br>
+            封装最主要的功能在于我们能修改自己的实现代码，而不用修改那些调用我们代码的程序片段。<br>
+            适当的封装可以让程式码更容易理解与维护，也加强了程式码的安全性。<br>
+            <b>封装的优点</b><br>
+            1. 良好的封装能够减少耦合。<br>
+            2. 类内部的结构可以自由修改。<br>
+            3. 可以对成员变量进行更精确的控制。<br>
+            4. 隐藏信息，实现细节。<br>
+            <b>就是用private私有化</b>
+        </p>
+        <h4>抽象</h4>
+        <p>
+            在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。<br>
+            抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。<br>
+            由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。<br>
+            父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。<br>
+            在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口。<br>
+            <b>抽象方法</b><br>
+            如果你想设计这样一个类，该类包含一个特别的成员方法，该方法的具体实现由它的子类确定，那么你可以在父类中声明该方法为抽象方法。<br>
+            Abstract 关键字同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。<br>
+            抽象方法没有定义，方法名后面直接跟一个分号，而不是花括号。<br>
+        <pre>
+                public abstract class Employee
+                {
+                private String name;
+                private String address;
+                private int number;
+                
+                public abstract double computePay();
+                
+                //其余代码
+                }
+            </pre>
+        <b>声明抽象方法会造成以下两个结果：</b><br>
+        如果一个类包含抽象方法，那么该类必须是抽象类。<br>
+        任何子类必须重写父类的抽象方法，或者声明自身为抽象类。<br>
+        继承抽象方法的子类必须重写该方法。否则，该子类也必须声明为抽象类。最终，必须有子类实现该抽象方法，否则，从最初的父类到最终的子类都不能用来实例化对象。<br>
+        如果Salary类继承了Employee类，那么它必须实现computePay()方法：<br>
+        <pre>
+            /* 文件名 : Salary.java */
+            public class Salary extends Employee
+            {
+            private double salary; // Annual salary
+            
+            public double computePay()
+            {
+                System.out.println("Computing salary pay for " + getName());
+                return salary/52;
+            }
+            
+            //其余代码
+            }
+        </pre>
+        </p>
+
+
+        <br>
+        <a name="2"></a>
+        <h3>String&StringBuilder&StringBuffer</h3>
+        <p>这是菜鸟笔记，官方链接<a href="https://www.runoob.com/java/java-string.html">String</a></p>
+        <p>StringBuffer&StringBuilder笔记，官方链接<a
+                href="https://www.runoob.com/java/java-stringbuffer.html">StringBuffer&StringBuilder</a></p>
+        <h4>String 方法</h4>
+        <p>
+        <ul>
+            <li>char charAt(int index)返回指定索引处的 char 值。</li>
+            <li>int compareTo(Object o)把这个字符串和另一个对象比较。</li>
+            <li>int compareTo(String anotherString)按字典顺序比较两个字符串。</li>
+            <li>int compareToIgnoreCase(String str)按字典顺序比较两个字符串，不考虑大小写。</li>
+            <li>String concat(String str)将指定字符串连接到此字符串的结尾。</li>
+            <li>boolean contentEquals(StringBuffer sb)
+                当且仅当字符串与指定的StringBuffer有相同顺序的字符时候返回真。</li>
+            <li> static String copyValueOf(char[] data)
+                返回指定数组中表示该字符序列的 String。</li>
+            <li> static String copyValueOf(char[] data, int offset, int count)
+                返回指定数组中表示该字符序列的 String。</li>
+            <li> boolean endsWith(String suffix)
+                测试此字符串是否以指定的后缀结束。</li>
+            <li>boolean equals(Object anObject)
+                将此字符串与指定的对象比较。</li>
+            <li> boolean equalsIgnoreCase(String anotherString)
+                将此 String 与另一个 String 比较，不考虑大小写。</li>
+            <li> byte[] getBytes()
+                使用平台的默认字符集将此 String 编码为 byte 序列，并将结果存储到一个新的 byte 数组中。</li>
+            <li> byte[] getBytes(String charsetName)
+                使用指定的字符集将此 String 编码为 byte 序列，并将结果存储到一个新的 byte 数组中。</li>
+            <li> void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+                将字符从此字符串复制到目标字符数组。</li>
+            <li> int hashCode()
+                返回此字符串的哈希码。</li>
+            <li> int indexOf(int ch)
+                返回指定字符在此字符串中第一次出现处的索引。</li>
+            <li> int indexOf(int ch, int fromIndex)
+                返回在此字符串中第一次出现指定字符处的索引，从指定的索引开始搜索。</li>
+            <li> int indexOf(String str)
+                返回指定子字符串在此字符串中第一次出现处的索引。</li>
+            <li> int indexOf(String str, int fromIndex)
+                返回指定子字符串在此字符串中第一次出现处的索引，从指定的索引开始。</li>
+            <li> String intern()
+                返回字符串对象的规范化表示形式。</li>
+            <li> int lastIndexOf(int ch)
+                返回指定字符在此字符串中最后一次出现处的索引。</li>
+            <li>int lastIndexOf(int ch, int fromIndex)
+                返回指定字符在此字符串中最后一次出现处的索引，从指定的索引处开始进行反向搜索。</li>
+            <li> int lastIndexOf(String str)
+                返回指定子字符串在此字符串中最右边出现处的索引。</li>
+            <li> int lastIndexOf(String str, int fromIndex)
+                返回指定子字符串在此字符串中最后一次出现处的索引，从指定的索引开始反向搜索。</li>
+            <li> int length()
+                返回此字符串的长度。</li>
+            <li> boolean matches(String regex)
+                告知此字符串是否匹配给定的正则表达式。</li>
+            <li> boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
+                测试两个字符串区域是否相等。</li>
+            <li> boolean regionMatches(int toffset, String other, int ooffset, int len)
+                测试两个字符串区域是否相等。</li>
+            <li> String replace(char oldChar, char newChar)
+                返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。</li>
+            <li> String replaceAll(String regex, String replacement)
+                使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串。</li>
+            <li> String replaceFirst(String regex, String replacement)
+                使用给定的 replacement 替换此字符串匹配给定的正则表达式的第一个子字符串。</li>
+            <li> String[] split(String regex)
+                根据给定正则表达式的匹配拆分此字符串。</li>
+            <li>String[] split(String regex, int limit)
+                根据匹配给定的正则表达式来拆分此字符串。</li>
+            <li> boolean startsWith(String prefix)
+                测试此字符串是否以指定的前缀开始。</li>
+            <li> boolean startsWith(String prefix, int toffset)
+                测试此字符串从指定索引开始的子字符串是否以指定前缀开始。</li>
+            <li> CharSequence subSequence(int beginIndex, int endIndex)
+                返回一个新的字符序列，它是此序列的一个子序列。</li>
+            <li> String substring(int beginIndex)
+                返回一个新的字符串，它是此字符串的一个子字符串。</li>
+            <li> String substring(int beginIndex, int endIndex)
+                返回一个新字符串，它是此字符串的一个子字符串。</li>
+            <li> char[] toCharArray()
+                将此字符串转换为一个新的字符数组。</li>
+            <li> String toLowerCase()
+                使用默认语言环境的规则将此 String 中的所有字符都转换为小写。</li>
+            <li> String toLowerCase(Locale locale)
+                使用给定 Locale 的规则将此 String 中的所有字符都转换为小写。</li>
+            <li> String toString()
+                返回此对象本身（它已经是一个字符串！）。</li>
+            <li> String toUpperCase()
+                使用默认语言环境的规则将此 String 中的所有字符都转换为大写。</li>
+            <li> String toUpperCase(Locale locale)
+                使用给定 Locale 的规则将此 String 中的所有字符都转换为大写。</li>
+            <li> String trim()
+                返回字符串的副本，忽略前导空白和尾部空白。</li>
+            <li> static String valueOf(primitive data type x)
+                返回给定data type类型x参数的字符串表示形式。</li>
+        </ul>
+        <b>这是复制的部分，具体可以看菜鸟教程，或者API文档</b>
+        </p>
+        <h4>StringBuffer类</h4>
+        <p>
+            <b>StringBuffer 和 StringBuilder 类</b>
+            当对字符串进行修改的时候，需要使用 StringBuffer 和 StringBuilder 类。<br>
+            和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。<br>
+            StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。<br>
+            由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer
+            类。<br>
+            <b>StringBuffer 方法</b>
+        <ul>
+            <li>public StringBuffer append(String s)
+                将指定的字符串追加到此字符序列。</li>
+            <li> public StringBuffer reverse()
+                将此字符序列用其反转形式取代。</li>
+            <li> public delete(int start, int end)
+                移除此序列的子字符串中的字符。</li>
+            <li> public insert(int offset, int i)
+                将 int 参数的字符串表示形式插入此序列中。</li>
+            <li> replace(int start, int end, String str)
+                使用给定 String 中的字符替换此序列的子字符串中的字符。</li>
+        </ul>
+        <b>太难复制了，还是去查API文档吧</b>
+
+        </p>
+        <br>
+        <a name="3"></a>
+        <h3>泛型</h3>
+        <p>用的还是菜鸟教程，官方链接<a href="https://www.runoob.com/java/java-generics.html">泛型</a></p>
+        <h4>Java 泛型</h4>
+        <p>
+            Java 泛型（generics）是 JDK 5 中引入的一个新特性, 泛型提供了编译时类型安全检测机制，该机制允许程序员在编译时检测到非法的类型。<br>
+            泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。<br>
+        <pre>
+                假定我们有这样一个需求：写一个排序方法，能够对整型数组、字符串数组甚至其他任何类型的数组进行排序，该如何实现？
+                答案是可以使用 Java 泛型。
+                使用 Java 泛型的概念，我们可以写一个泛型方法来对一个对象数组排序。然后，调用该泛型方法来对整型数组、浮点数数组、字符串数组等进行排序。
+            </pre>
+        </p>
+        <h4>泛型方法</h4>
+        <p>
+            你可以写一个泛型方法，该方法在调用时可以接收不同类型的参数。根据传递给泛型方法的参数类型，编译器适当地处理每一个方法调用。<br>
+            <b>下面是定义泛型方法的规则：</b><br>
+        <ul>
+            <li>所有泛型方法声明都有一个类型参数声明部分（由尖括号分隔），该类型参数声明部分在方法返回类型之前（在下面例子中的&lt;E&gt;）。</li>
+            <li>每一个类型参数声明部分包含一个或多个类型参数，参数间用逗号隔开。一个泛型参数，也被称为一个类型变量，是用于指定一个泛型类型名称的标识符。</li>
+            <li>类型参数能被用来声明返回值类型，并且能作为泛型方法得到的实际参数类型的占位符。</li>
+            <li>泛型方法体的声明和其他方法一样。注意类型参数只能代表引用型类型，不能是原始类型（像int,double,char的等）。</li>
+        </ul>
+        <b>实例</b>
+        <pre>
+            public class GenericMethodTest
+            {
+               // 泛型方法 printArray                         
+               public static < E > void printArray( E[] inputArray )
+               {
+                  // 输出数组元素            
+                     for ( E element : inputArray ){        
+                        System.out.printf( "%s ", element );
+                     }
+                     System.out.println();
+                }
+             
+                public static void main( String args[] )
+                {
+                    // 创建不同类型数组： Integer, Double 和 Character
+                    Integer[] intArray = { 1, 2, 3, 4, 5 };
+                    Double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
+                    Character[] charArray = { 'H', 'E', 'L', 'L', 'O' };
+             
+                    System.out.println( "整型数组元素为:" );
+                    printArray( intArray  ); // 传递一个整型数组
+             
+                    System.out.println( "\n双精度型数组元素为:" );
+                    printArray( doubleArray ); // 传递一个双精度型数组
+             
+                    System.out.println( "\n字符型数组元素为:" );
+                    printArray( charArray ); // 传递一个字符型数组
+                } 
+            }
+            </pre>
+        <b>输出</b>
+        <pre>
+                整型数组元素为:
+                1 2 3 4 5 
+
+                双精度型数组元素为:
+                1.1 2.2 3.3 4.4 
+
+                字符型数组元素为:
+                H E L L O 
+            </pre>
+        </p>
+        <h4>泛型类</h4>
+        <p>
+            泛型类的声明和非泛型类的声明类似，除了在类名后面添加了类型参数声明部分。<br>
+            和泛型方法一样，泛型类的类型参数声明部分也包含一个或多个类型参数，参数间用逗号隔开。一个泛型参数，也被称为一个类型变量，是用于指定一个泛型类型名称的标识符。因为他们接受一个或多个参数，这些类被称为参数化的类或参数化的类型。<br>
+            <b>实例</b>
+            <xmp>
+                public class Box<T> {
+   
+                    private T t;
+                   
+                    public void add(T t) {
+                      this.t = t;
+                    }
+                   
+                    public T get() {
+                      return t;
+                    }
+                   
+                    public static void main(String[] args) {
+                      Box<Integer> integerBox = new Box<Integer>();
+                      Box<String> stringBox = new Box<String>();
+                   
+                      integerBox.add(new Integer(10));
+                      stringBox.add(new String("菜鸟教程"));
+                   
+                      System.out.printf("整型值为 :%d\n\n", integerBox.get());
+                      System.out.printf("字符串为 :%s\n", stringBox.get());
+                    }
+                  }
+            </xmp>
+            <b>输出</b>
+            <pre>
+                整型值为 :10
+
+                字符串为 :菜鸟教程
+            </pre>
+        </p>
+        <h4>类型通配符</h4>
+        <p>
+            1、类型通配符一般是使用?代替具体的类型参数。例如 List<?> 在逻辑上是List<String>,List<Integer> 等所有List<具体类型实参>的父类。<br>
+            <b>实例</b>
+            <xmp>
+                import java.util.*;
+ 
+                public class GenericTest {
+                    
+                    public static void main(String[] args) {
+                        List<String> name = new ArrayList<String>();
+                        List<Integer> age = new ArrayList<Integer>();
+                        List<Number> number = new ArrayList<Number>();
+                        
+                        name.add("icon");
+                        age.add(18);
+                        number.add(314);
+                
+                        getData(name);
+                        getData(age);
+                        getData(number);
+                    
+                }
+                
+                public static void getData(List<?> data) {
+                    System.out.println("data :" + data.get(0));
+                }
+                }
+            </xmp>
+            <b>输出</b>
+            <pre>
+                data :icon
+                data :18
+                data :314
+            </pre>
+            2、类型通配符上限通过形如List来定义，如此定义就是通配符泛型值接受Number及其下层子类类型。<br>
+            <b>实例</b>
+            <xmp>
+                import java.util.*;
+ 
+                public class GenericTest {
+                    
+                    public static void main(String[] args) {
+                        List<String> name = new ArrayList<String>();
+                        List<Integer> age = new ArrayList<Integer>();
+                        List<Number> number = new ArrayList<Number>();
+                        
+                        name.add("icon");
+                        age.add(18);
+                        number.add(314);
+                
+                        //getUperNumber(name);//1
+                        getUperNumber(age);//2
+                        getUperNumber(number);//3
+                    
+                }
+                
+                public static void getData(List<?> data) {
+                    System.out.println("data :" + data.get(0));
+                }
+                
+                public static void getUperNumber(List<? extends Number> data) {
+                        System.out.println("data :" + data.get(0));
+                    }
+                }
+            </xmp>
+            <b>输出</b>
+            <pre>
+                data :18
+                data :314
+            </pre>
+            3、类型通配符下限通过形如 List<? super Number>来定义，表示类型只能接受Number及其三层父类类型，如 Object 类型的实例。
+        </p>
+        <br>
+    </div>
+
+    <!-- 脚尾 -->
+    <footer id="footer">
+        <a onmouseover="our()" onmouseout="exit()">联系我们</a><br>
+        <p id="we"></p><br>
+        <a href="https://www.runoob.com/w3cnote">友情链接</a>
+        <script>
+            function our() {
+                document.getElementById("we").innerHTML = "联系方式：QQ：1660373495<br>微信：liwinallucky";
+            }
+            function exit() {
+                document.getElementById("we").innerHTML = "";
+            }
+        </script>
+    </footer>
+</body>
+
+</html>

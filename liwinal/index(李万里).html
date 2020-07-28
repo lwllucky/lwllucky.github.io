@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <!-- 编写软件vscode -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客主页</title>
+    <link rel="stylesheet" href="style(李万里).css">
+</head>
+
+<body>
+    <!-- 广告栏 -->
+    <span id="advertisement">
+        <img id="img1" src="./image/advertisement.jpg" alt="" title="广告栏">
+        <!-- 轮番播放 -->
+        <script>
+            window.onload = function () {
+                var img1 = document.getElementById("img1");
+                var imgArr = ["./image/2.jpg", "./image/3.jpg", "./image/advertisement.jpg"];
+                var index = 0;
+
+                setInterval(function () {
+                    index++;
+                    if (index >= imgArr.length) {
+                        index = 0;
+                    }
+
+                    img1.src = imgArr[index];
+
+                }, 1000);
+            };
+        </script>
+    </span>
+    <div id="h">我的博客---仿菜鸟界面</div>
+    <!-- 第一栏 -->
+    <header id="header">
+        <ul>
+            <li><a href="index(李万里).html">首页</a></li>
+            <li><a href="liwanli/liwanli(李万里).html">诚斋</a></li>
+            <li><a href="git(李万里).html">git</a></li>
+            <li><a href="index(李万里).html">前端</a></li>
+            <li><a href="java(李万里).html">java</a></li>
+        </ul>
+    </header>
+    <!-- 侧边栏 -->
+    <aside id="body1">
+        <!-- 第一部分 -->
+        <span class="b1">
+            <!-- liwinal -->
+            <div class="bb1">
+                <a href="liwanli/liwanli(李万里).html" target="_blank"><img src="./image/myheader.png" alt="" width="100px"
+                        height="100px"><br>liwinallucky</a>
+            </div>
+            <!-- liyuhua -->
+            <div class="bb2">
+                <a href="liyuhua"><img src="./image/liyuhua.jpg" alt="" width="100px" height="100px"><br>长烟一空</a>
+            </div>
+        </span>
+    </aside>
+    <!-- 主文部分 -->
+    <section id="body2">
+        <article class="a1">
+            <a href="#1">HTML教程</a>
+            <p>这个讲述的是HTML的用法</p>
+            <p>HTML 是用来描述网页的一种语言。</p>
+            <ul>
+                <li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)</li>
+                <li>HTML 不是一种编程语言，而是一种标记语言 (markup language)</li>
+                <li>标记语言是一套标记标签 (markup tag)</li>
+                <li>HTML 使用标记标签来描述网页</li>
+            </ul>
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#2">css教程</a>
+            <p>这是css的使用教程</p>
+            <p>CSS 概述</p>
+            <ul>
+                <li>CSS 指层叠样式表 (Cascading Style Sheets)</li>
+                <li>样式定义如何显示 HTML 元素</li>
+                <li>样式通常存储在样式表中</li>
+                <li>把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题</li>
+                <li>外部样式表可以极大提高工作效率</li>
+                <li>外部样式表通常存储在 CSS 文件中</li>
+                <li>多个样式定义可层叠为一</li>
+            </ul>
+
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#3">javascript教程</a>
+            <p>这是javascript的教程</p>
+            <ul>
+                <li>JavaScript 能够改变 HTML 内容</li>
+                <li>JavaScript 能够改变 HTML 属性</li>
+                <li>JavaScript 能够改变 HTML 样式 (CSS)</li>
+                <li>JavaScript 能够隐藏 HTML 元素</li>
+                <li>JavaScript 能够显示 HTML 元素</li>
+            </ul>
+        </article>
+    </section>
+    <!-- 正文 -->
+    <div id="body3">
+        <a name="1"></a>
+        <h3>HTML标签使用</h3>
+        <p>这是w3c的笔记，官方链接<a href="https://www.w3school.com.cn/html/html_attributes.asp">w3school</a></p>
+        <h4>标签，只有几个，无顺序</h4>
+        <p>HTML 标题（Heading）是通过&lt;h1&gt; - &lt;h6&gt; 等标签进行定义的。<br>
+            HTML 段落是通过&lt;p&gt;标签进行定义的。<br>
+            HTML 链接是通过&lt;a&gt;标签进行定义的。<br>
+            HTML 图像是通过 &lt;img&gt; 标签进行定义的。<br>
+        </p>
+        <h4>表格</h4>
+        <p>
+            &lt;table&gt;--&gt;&lt;tr&gt;--&gt;&lt;td&gt;<br>
+            表头用&lt;th&gt;数据用&lt;td&gt;<br>
+            显示边框在table里面写属性border="1"
+        <table border="1">
+            <caption>表格标签说明</caption>
+            <tr>
+                <th>表格</th>
+                <th>描述</th>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>定义表格</td>
+            </tr>
+            <tr>
+                <td>&lt;caption&gt;</td>
+                <td>定义表格标题</td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>定义表格的表头</td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>定义表格的行</td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>定义表格单元</td>
+            </tr>
+            <tr>
+                <td>&lt;thead&gt;</td>
+                <td>定义表格的页眉</td>
+            </tr>
+            <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>定义表格的主体</td>
+            </tr>
+            <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>定义表格的页脚</td>
+            </tr>
+            <tr>
+                <td>&lt;col&gt;</td>
+                <td>定义用于表格列的属性</td>
+            </tr>
+            <tr>
+                <td>&lt;colgroup&gt;</td>
+                <td>定义表格列的组</td>
+            </tr>
+        </table>
+        原样代码：<br>
+        <xmp>
+            <table border="1">
+                <caption>表格标签说明</caption>
+                <tr>
+                    <th>表格</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>定义表格</td>
+                </tr>
+                <tr>
+                    <td>&lt;caption&gt;</td>
+                    <td>定义表格标题</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>定义表格的表头</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>定义表格的行</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>定义表格单元</td>
+                </tr>
+                <tr>
+                    <td>&lt;thead&gt;</td>
+                    <td>定义表格的页眉</td>
+                </tr>
+                <tr>
+                    <td>&lt;tbody&gt;</td>
+                    <td>定义表格的主体</td>
+                </tr>
+                <tr>
+                    <td>&lt;tfoot&gt;</td>
+                    <td>定义表格的页脚</td>
+                </tr>
+                <tr>
+                    <td>&lt;col&gt;</td>
+                    <td>定义用于表格列的属性</td>
+                </tr>
+                <tr>
+                    <td>&lt;colgroup&gt;</td>
+                    <td>定义表格列的组</td>
+                </tr>
+            </table>
+        </xmp>
+
+        </p>
+        <h4>列表</h4>
+        <p>
+            有序列表&lt;ol&gt;--&gt;&lt;li&gt;<br>
+            无序列表&lt;ul&gt;--&gt;&lt;li&gt;<br>
+            定义列表<br>
+            自定义列表不仅仅是一列项目，而是项目及其注释的组合。<br>
+            自定义列表以&lt;dl&gt;标签开始。每个自定义列表项以&lt;dt&gt;开始。每个自定义列表项的定义以&lt;dd&gt;开始。<br>
+            例：<xmp>
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                </dl>
+            </xmp>
+            结果：
+        <dl>
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+        </dl>
+        </p>
+
+
+        <br>
+        <a name="2"></a>
+        <h3>css教程</h3>
+        <p>这是菜鸟笔记，官方链接<a href="https://www.runoob.com/css/css-tutorial.html">菜鸟教程</a></p>
+        <h4>id和class选择器</h4>
+        <p><b>id选择器：</b> 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。
+            <br>
+            HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。
+            <br>
+            <b>class选择器：</b>class 选择器用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用。
+            <br>
+            class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号显示：
+            <br>
+        </p>
+        <h4>css的创建</h4>
+        <p>
+            插入样式表的方法有三种:
+            <br>
+            外部样式表(External style sheet)
+            <br>
+            内部样式表(Internal style sheet)
+            <br>
+            内联样式(Inline style)
+            <br>
+            下面就用例子来看
+            <br>
+            <b>外部样式表：</b>
+            <xmp>
+                html文件
+
+                <head>
+                    <link rel="stylesheet" type="text/css" href="mystyle.css">
+                </head>
+                css文件
+                hr {color:sienna;}
+                p {margin-left:20px;}
+                body {background-image:url("/images/back40.gif");}
+            </xmp>
+            <b>内部样式表：</b>
+            <xmp>
+
+                <head>
+                    <style>
+                        hr {
+                            color: sienna;
+                        }
+
+                        p {
+                            margin-left: 20px;
+                        }
+
+                        body {
+                            background-image: url("images/back40.gif");
+                        }
+                    </style>
+                </head>
+            </xmp>
+            <b>内联样式:</b>
+            <xmp>
+                <p style="color:sienna;margin-left:20px">这是一个段落。</p>
+            </xmp>
+            <b>多重样式：</b>
+            <xmp>
+                如果某些属性在不同的样式表中被同样的选择器定义，那么属性值将从更具体的样式表中被继承过来。
+                例如，外部样式表拥有针对 h3 选择器的三个属性：
+                h3
+                {
+                color:red;
+                text-align:left;
+                font-size:8pt;
+                }
+                而内部样式表拥有针对 h3 选择器的两个属性：
+
+                h3
+                {
+                text-align:right;
+                font-size:20pt;
+                }
+                假如拥有内部样式表的这个页面同时与外部样式表链接，那么 h3 得到的样式是：
+
+                color:red;
+                text-align:right;
+                font-size:20pt;
+                即颜色属性将被继承于外部样式表，而文字排列（text-alignment）和字体尺寸（font-size）会被内部样式表中的规则取代。
+            </xmp>
+            <b>多重样式优先级：</b>
+            <xmp>
+                样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。
+
+                一般情况下，优先级如下：
+
+                内联样式）Inline style > （内部样式）Internal style sheet >（外部样式）External style sheet > 浏览器默认样式
+
+                <head>
+                    <!-- 外部样式 style.css -->
+                    <link rel="stylesheet" type="text/css" href="style.css" />
+                    <!-- 设置：h3{color:blue;} -->
+                    <style type="text/css">
+                        /* 内部样式 */
+                        h3 {
+                            color: green;
+                        }
+                    </style>
+                </head>
+
+                <body>
+                    <h3>测试！</h3>
+                </body>
+            </xmp>
+        </p>
+        <h4>背景</h4>
+        <p>
+            <b>背景颜色:</b>background-color:
+            <br>颜色值通常以以下方式定义:<br>
+            十六进制 - 如："#ff0000"<br>
+            RGB - 如："rgb(255,0,0)"<br>
+            颜色名称 - 如："red"<br>
+            <b>背景图像：</b>background-image:url("图片路径");
+            <br>默认情况下，背景图像进行平铺重复显示，以覆盖整个元素实体.
+            <br>背景图像 - 水平或垂直平铺<br>
+            如果图像只在水平方向平铺 (repeat-x)：<br>
+            <xmp>
+                body
+                {
+                background-image:url('gradient2.png');
+                background-repeat:repeat-x;
+                }
+            </xmp>
+            背景图像- 设置定位与不平铺<br>
+            <xmp>
+                body
+                {
+                background-image:url('img_tree.png');
+                background-repeat:no-repeat;
+                }
+            </xmp>
+            以上实例中，背景图像与文本显示在同一个位置，为了让页面排版更加合理，不影响文本的阅读，我们可以改变图像的位置。<br>
+            可以利用 background-position 属性改变图像在背景中的位置:
+            <xmp>
+                body
+                {
+                background-image:url('img_tree.png');
+                background-repeat:no-repeat;
+                background-position:right top;
+                }
+            </xmp>
+            背景- 简写属性<br>
+            在以上实例中我们可以看到页面的背景颜色通过了很多的属性来控制。
+            <br>
+            为了简化这些属性的代码，我们可以将这些属性合并在同一个属性中.
+            <br>
+            背景颜色的简写属性为 "background":
+            <xmp>
+                body {background:#ffffff url('img_tree.png') no-repeat right top;}
+            </xmp>
+        </p>
+
+
+        <br>
+        <a name="3"></a>
+        <h3>javascript教程</h3>
+        <p>javascript采用w3c的笔记，官方链接<a href="https://www.w3school.com.cn/js/js_intro.asp">w3school</a></p>
+        <h4>输出</h4>
+        <p>
+            使用 window.alert() 写入警告框<br>
+            使用 document.write() 写入 HTML 输出<br>
+            使用 innerHTML 写入 HTML 元素<br>
+            使用 console.log() 写入浏览器控制台<br>
+            例：
+            <xmp>
+                <!DOCTYPE html>
+                <html>
+
+                <body>
+
+                    <h1>我的第一张网页</h1>
+
+                    <p>我的第一个段落</p>
+
+                    <p id="demo"></p>
+
+                    <script>
+                        document.getElementById("demo").innerHTML = 5 + 6;
+                    </script>
+
+                </body>
+
+                </html>
+            </xmp>
+            getElementById() 是多个 JavaScript HTML 方法之一。本例使用该方法来“查找” id="demo" 的 HTML 元素，并把元素内容（innerHTML）更改为 5+6
+        </p>
+        <br>
+    </div>
+
+    <!-- 脚尾 -->
+    <footer id="footer">
+        <a onmouseover="our()" onmouseout="exit()">联系我们</a><br>
+        <p id="we"></p><br>
+        <a href="https://www.runoob.com/w3cnote">友情链接</a>
+        <script>
+            function our() {
+                document.getElementById("we").innerHTML = "联系方式：QQ：1660373495<br>微信：liwinallucky";
+            }
+            function exit() {
+                document.getElementById("we").innerHTML = "";
+            }
+        </script>
+    </footer>
+</body>
+
+</html>

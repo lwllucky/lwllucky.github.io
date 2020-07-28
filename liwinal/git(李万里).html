@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <!-- 编写软件vscode -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客git主页</title>
+    <link rel="stylesheet" href="style(李万里).css">
+</head>
+
+<body>
+    <!-- 广告栏 -->
+    <span id="advertisement">
+        <img id="img1" src="./image/advertisement.jpg" alt="" title="广告栏">
+        <!-- 轮番播放 -->
+        <script>
+            window.onload = function () {
+                var img1 = document.getElementById("img1");
+                var imgArr = ["./image/2.jpg", "./image/3.jpg", "./image/advertisement.jpg"]
+                var index = 0;
+
+                setInterval(function () {
+                    index++;
+                    if (index >= imgArr.length) {
+                        index = 0;
+                    }
+
+                    img1.src = imgArr[index];
+
+                }, 1000);
+            };
+        </script>
+    </span>
+    <div id="h">我的博客---仿菜鸟界面---git只是上传github的命令讲解</div>
+    <!-- 第一栏 -->
+    <header id="header">
+
+        <ul>
+            <li><a href="index(李万里).html">首页</a></li>
+            <li><a href="liwanli/liwanli(李万里).html">诚斋</a></li>
+            <li><a href="git(李万里).html">git</a></li>
+            <li><a href="index(李万里).html">前端</a></li>
+            <li><a href="java(李万里).html">java</a></li>
+        </ul>
+    </header>
+    <!-- 侧边栏 -->
+    <aside id="body1">
+        <!-- 第一部分 -->
+        <span class="b1">
+            <!-- liwinal -->
+            <div class="bb1">
+                <a href="liwanli/liwanli(李万里).html" target="_blank"><img src="./image/myheader.png" alt="" width="100px"
+                        height="100px"><br>liwinallucky</a>
+            </div>
+            <!-- liyuhua -->
+            <div class="bb2">
+                <a href="liyuhua"><img src="./image/liyuhua.jpg" alt="" width="100px" height="100px"><br>长烟一空</a>
+            </div>
+        </span>
+    </aside>
+    <!-- 主文部分 -->
+    <section id="body2">
+        <article class="a1">
+            <a href="#1">第一次上传</a>
+            <p>这是第一次上传代码到github的全部过程，具体点击绿色标签</p>
+            <p>适用于电脑什么都没有的小白，虽然我也是小白</p>
+            <ul>
+                <li>git add. 提交本地代码到缓存区中</li>
+                <li>git status 提交了之后你可以查看代码状态</li>
+                <li>git commit -m "First commit" 将暂存区的代码提交到本地仓库 这里要在-m参数后面加上提交参数，很重要哟，不然会被认为不合法不能提交</li>
+                <li>git remote add origin https://github.com/zhangciren/-.git 将本地仓库（版本库）中的代码提交到远程github上</li>
+            </ul>
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#2">第二次上传(更新)</a>
+            <p>这是第二次上传代码到github的全部过程，具体点击绿色标签</p>
+            <p>就是更新github上的代码</p>
+            <ul>
+                <li>git add * 代表更新全部</li>
+                <li>git commit -m "更新说明" commit只是提交到缓存区域---例：git commit -m "update"</li>
+                <li>git pull 拉取当前分支最新代码</li>
+                <li>git push origin master 这一步才是push到远程master分支上</li>
+                <li>删除：git rm -r --cached cloudfunctions/admin/package-lock.josn 删除磁盘上的package-lock.josn文件</li>
+                <li>再输入命令git commit -m '删除了package-lock.josn' 提交添加说明</li>
+                <li>最后输入git push -u origin master 更新github仓库</li>
+            </ul>
+
+        </article>
+        <br>
+        <article class="a1">
+            <a href="#3">分支管理</a>
+            <p>这是关于分支的一些代码</p>
+            <ul>
+                <li>git branch 查看分支</li>
+                <li>git branch -r 查看本地和远程的所有分支</li>
+                <li>git checkout -b 分支名 新建并转到新的分支--转了之后就是提交到分支上</li>
+                <li>git checkout master 转到总分支</li>
+                <li>git branch -a 查看远程仓库的分支</li>
+            </ul>
+        </article>
+    </section>
+    <!-- 正文 -->
+    <div id="body3">
+        <a name="1"></a>
+        <h3>第一次上传</h3>
+        <p>git下载链接<a href="https://git-scm.com/downloads">git</a><br>
+            github官网地址<a href="https://github.com/">github</a></p>
+        <h4>安装好git之后的操作</h4>
+        <p>（1）先建一个文件夹，用来存放代码<br>
+            （2）可以鼠标右键打开gitbash<br>
+            （3）开始输入命令：<br>
+            git init 创建库<br>
+            git add . 提交本地代码到暂存区中--add 文件名 是提交单个文件<br>
+            git status 提交了之后你可以查看代码状态<br>
+            git commit -m "First commit" 将暂存区的代码提交到本地仓库 这里要在-m参数后面加上提交参数，很重要哟，不然会被认为不合法不能提交<br>
+            git remote add origin https://github.com/zhangciren/-.git 将本地仓库（版本库）中的代码提交到远程github上--git remote rm
+            origin删除起源<br>
+            git push -u origin master 提交（这里的master是分支名）<br>
+            （4）注意：<br>
+            1、第6步提交时，第一次需要输入github账号、密码，后续提交不需要了<br>
+            2、第5步提交时，第一次提交不会报错，第二次开始就会出现remote origin already exists 。<br>
+            解决办法：git remote rm origin(先删除远程git仓)，再此执行git remote add origin https://github.com/zhangciren/-.git<br>
+
+        </p>
+        <br>
+        <a name="2"></a>
+        <h3>第二次上传(更新)</h3>
+        <p>这只是更新命令，可以看菜鸟的git教程<a href="https://www.runoob.com/git/git-tutorial.html">git</a></p>
+        <h4>更新命令</h4>
+        <p>
+        <ul>
+            <li>git add * 代表更新全部</li>
+            <li>git commit -m "更新说明" commit只是提交到缓存区域---例：git commit -m "update"</li>
+            <li>git pull 拉取当前分支最新代码</li>
+            <li>git push origin master 这一步才是push到远程master分支上</li>
+            <li>删除：git rm -r --cached cloudfunctions/admin/package-lock.josn 删除磁盘上的package-lock.josn文件</li>
+            <li>再输入命令git commit -m '删除了package-lock.josn' 提交添加说明</li>
+            <li>最后输入git push -u origin master 更新github仓库</li>
+            <li>git pull origin分支名称--拉取（下载）指定分支代码合并到当前分支：相当于指定分支的代码与当前分支的代码合并到了一起。</li>
+            <li>master主干分支</li>
+        </ul>
+        </p>
+
+        <br>
+        <a name="3"></a>
+        <h3>分支管理</h3>
+        <p>这是关于分支的一些命令</p>
+        <h4>命令如下</h4>
+        <p>
+        <ul>
+            <li>git branch 查看分支</li>
+            <li>git branch -r 查看本地和远程的所有分支</li>
+            <li>git checkout -b 分支名 新建并转到新的分支--转了之后就是提交到分支上</li>
+            <li>git checkout master 转到总分支</li>
+            <li>git branch -a 查看远程仓库的分支</li>
+            <li>git push 仓库名 delete 分支名 删除远程仓库分支或git push 仓库名 :分支名</li>
+            <li>git branch -D 分支名 删除本地分支</li>
+            <li>git merge 分支名 将分支合并到总分支上--要在总分支上操作</li>
+            <li>git lo 查看合并后的信息</li>
+            <li>git commit "提交说明" 文件名加后缀 提交到远程仓库</li>
+            <li>git push 仓库名 分支名 推送到远程仓库</li>
+            <li>git status 查看仓库当前的状态</li>
+        </ul>
+        </p>
+        <br>
+    </div>
+
+    <!-- 脚尾 -->
+    <footer id="footer">
+        <a onmouseover="our()" onmouseout="exit()">联系我们</a><br>
+        <p id="we"></p><br>
+        <a href="https://www.runoob.com/w3cnote">友情链接</a>
+        <script>
+            function our() {
+                document.getElementById("we").innerHTML = "联系方式：QQ：1660373495<br>微信：liwinallucky";
+            }
+            function exit() {
+                document.getElementById("we").innerHTML = "";
+            }
+        </script>
+    </footer>
+</body>
+
+</html>
