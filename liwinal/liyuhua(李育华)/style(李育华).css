@@ -1,0 +1,121 @@
+@charset "utf-8";
+body {
+	margin: 0px;
+	background: url(img/BeiJing2.jpg);
+	background-size: 1366px 750px;
+	position: relative;
+}
+header {
+	width: 100%;
+	height: 70px;
+}
+aside {
+	width: 40%;
+	height:500px;
+	position: relative; 
+	float: left;
+}
+section {
+	width: 60%;
+	height: 679px;
+	border: 1px solid #6484bd;
+	background-color: #d8dbf8;
+	float: right;
+	opacity: 70%;
+	position:absolute;
+	top:70px;
+	left:550px;
+}
+footer {
+	width: 100%;
+	height: 150px;
+	background-color:;
+	position: absolute;
+	top:770px;
+	left:10px;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	letter-spacing: 10px;
+	line-height: 150px;
+}
+
+#li {
+	width: 100%;
+	height: 500px;
+	border: 10px solid #B3D9D9;
+}
+#nav {
+	background-color: #6484bd;
+	width: 75%;
+	height: 70px;
+	float: right;
+}
+#nav .nav1 li a {
+	color:white;
+	text-decoration: none;
+}
+ul {
+	list-style: outside none none;
+	text-align: center;
+	margin: 0 auto;
+}
+#nav .nav1 li {
+	float: left;
+	width: 15%;
+	line-height: 70px;
+	text-align: center;
+}
+#h1 {
+	width: 25%;
+	height: 70px;
+	background-color: #6484bd;
+	color: black;
+	float: left;
+	font-style:italic;
+	font-size: 30px;
+	color: gray;
+	text-align: center;
+	margin: 0 auto;
+}
+.introduce {
+	width: 100%;
+	height: 100px;
+	background-color:black;
+	opacity: 20%;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+.introduce1 {
+	width: 100%;
+	height: 200px;
+	background-color:black;
+	opacity: 20%;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+.i1 {
+	position: absolute;
+	top:10px;
+	left:200px;
+	font-size: 30px;
+}
+.zp img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	position: absolute;
+	top:50px;
+	left: 125px;
+}
+.div2 .ul1 li {
+	width: 100%;
+	height: 50px;
+	color: white;
+	list-style-type:georgian;
+}
+h3 {
+	text-align: center;
+}

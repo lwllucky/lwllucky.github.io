@@ -1,0 +1,25 @@
+@charset "utf-8";
+body{
+    background-image: url(./img/background.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+p{
+    text-indent: 2em;
+}
+h1{
+    color: #37416e;
+}
+h2{
+    color: #5a7a9d;
+}
+.body1{
+    width: 900px;
+}
+a{
+    color: #970184;
+    text-decoration: none;
+}
+a:hover{
+    color: #5a7a9d;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liwinallucky的博客</title>
+    <link rel="stylesheet" href="liwanli(李万里).css">
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav id="navigation">
+        <ul>
+            <li><a href="../index(李万里).html">首页</a></li>
+            <li><a href="article(李万里).html">文章</a></li>
+        </ul>
+    </nav>
+    <!-- script修改用的 -->
+    <p id="update"></p>
+    <a id="a1" href="../index(李万里).html"><span class="circle head">首页</span></a>
+    <a id="a1" href="article(李万里).html"><span class="circle article">文章</span></a>
+    <a id="a1" onclick="note()"><span class="circle note">信息</span></a>
+    <a id="a1" onclick="advertising()"><span class="circle advertising">广告费</span></a>
+    <a id="a1" onclick="relationMe()"><span class="circle relation">联系方式</span></a>
+    <a id="a1" onclick="like()"><span class="circle like">个人爱好</span></a>
+    <script>
+        function note() {
+            document.getElementById("update").innerHTML = "就读学校：电子科技大学成都学院<br>系别：计算机系<br>班级：移动互联一班";
+            document.getElementById("update").style.color = "#122138";
+        }
+        function advertising() {
+            document.getElementById("update").innerHTML = "广告费说明：<br>首页广告：10元/月<br>个人页：5元/月,位置可自己选择";
+            document.getElementById("update").style.color = "#122138";
+        }
+        function relationMe() {
+            document.getElementById("update").innerHTML = "联系方式：<br>QQ：1660373495<br>微信：liwinallucky";
+            document.getElementById("update").style.color = "#122138";
+        }
+        function like() {
+            document.getElementById("update").innerHTML = "我的爱好：<br>横笛<<无羁>><br>围棋<br>编程，算法";
+            document.getElementById("update").style.color = "#37426d";
+        }
+    </script>
+
+</body>
+
+</html>

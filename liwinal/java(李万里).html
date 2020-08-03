@@ -37,10 +37,12 @@
     <header id="header">
         <ul>
             <li><a href="index(李万里).html">首页</a></li>
-            <li><a href="liwanli/liwanli(李万里).html">诚斋</a></li>
             <li><a href="git(李万里).html">git</a></li>
             <li><a href="index(李万里).html">前端</a></li>
             <li><a href="java(李万里).html">java</a></li>
+            <li><a href="liwanli(李万里)/liwanli(李万里).html">诚斋</a></li>
+            <li><a href="liyuhua(李育华)/index1(李育华).html">长烟</a></li>
+            <li><a href="liyuhua(李育华)/index2(李育华).html">一空</a></li>
         </ul>
     </header>
     <!-- 侧边栏 -->
@@ -49,12 +51,13 @@
         <span class="b1">
             <!-- liwinal -->
             <div class="bb1">
-                <a href="liwanli/liwanli(李万里).html" target="_blank"><img src="./image/myheader.png" alt="" width="100px"
-                        height="100px"><br>liwinallucky</a>
+                <a href="liwanli(李万里)/liwanli(李万里).html" target="_blank"><img src="./image/myheader.png" alt=""
+                        width="100px" height="100px"><br>liwinallucky</a>
             </div>
             <!-- liyuhua -->
             <div class="bb2">
-                <a href="liyuhua"><img src="./image/liyuhua.jpg" alt="" width="100px" height="100px"><br>长烟一空</a>
+                <a href="liyuhua(李育华)/index(李育华).html" target="_blank"><img src="./image/liyuhua.jpg" alt=""
+                        width="100px" height="100px"><br>长烟一空</a>
             </div>
         </span>
     </aside>
@@ -402,31 +405,31 @@
             <b>实例</b>
             <xmp>
                 public class Box<T> {
-   
+
                     private T t;
-                   
+
                     public void add(T t) {
-                      this.t = t;
+                    this.t = t;
                     }
-                   
+
                     public T get() {
-                      return t;
+                    return t;
                     }
-                   
+
                     public static void main(String[] args) {
-                      Box<Integer> integerBox = new Box<Integer>();
-                      Box<String> stringBox = new Box<String>();
-                   
-                      integerBox.add(new Integer(10));
-                      stringBox.add(new String("菜鸟教程"));
-                   
-                      System.out.printf("整型值为 :%d\n\n", integerBox.get());
-                      System.out.printf("字符串为 :%s\n", stringBox.get());
-                    }
-                  }
+                    Box<Integer> integerBox = new Box<Integer>();
+                            Box<String> stringBox = new Box<String>();
+
+                                    integerBox.add(new Integer(10));
+                                    stringBox.add(new String("菜鸟教程"));
+
+                                    System.out.printf("整型值为 :%d\n\n", integerBox.get());
+                                    System.out.printf("字符串为 :%s\n", stringBox.get());
+                                    }
+                                    }
             </xmp>
             <b>输出</b>
-            <pre>
+        <pre>
                 整型值为 :10
 
                 字符串为 :菜鸟教程
@@ -434,7 +437,8 @@
         </p>
         <h4>类型通配符</h4>
         <p>
-            1、类型通配符一般是使用?代替具体的类型参数。例如 List<?> 在逻辑上是List<String>,List<Integer> 等所有List<具体类型实参>的父类。<br>
+            1、类型通配符一般是使用?代替具体的类型参数。例如 List
+            <?> 在逻辑上是List<String>,List<Integer> 等所有List<具体类型实参>的父类。<br>
             <b>实例</b>
             <xmp>
                 import java.util.*;
@@ -457,39 +461,40 @@
                 }
                 
                 public static void getData(List<?> data) {
-                    System.out.println("data :" + data.get(0));
-                }
-                }
+            System.out.println("data :" + data.get(0));
+            }
+            }
             </xmp>
             <b>输出</b>
-            <pre>
+        <pre>
                 data :icon
                 data :18
                 data :314
             </pre>
-            2、类型通配符上限通过形如List来定义，如此定义就是通配符泛型值接受Number及其下层子类类型。<br>
-            <b>实例</b>
-            <xmp>
-                import java.util.*;
- 
-                public class GenericTest {
-                    
-                    public static void main(String[] args) {
-                        List<String> name = new ArrayList<String>();
-                        List<Integer> age = new ArrayList<Integer>();
-                        List<Number> number = new ArrayList<Number>();
-                        
-                        name.add("icon");
-                        age.add(18);
-                        number.add(314);
-                
-                        //getUperNumber(name);//1
-                        getUperNumber(age);//2
-                        getUperNumber(number);//3
-                    
-                }
-                
-                public static void getData(List<?> data) {
+        2、类型通配符上限通过形如List来定义，如此定义就是通配符泛型值接受Number及其下层子类类型。<br>
+        <b>实例</b>
+        <xmp>
+            import java.util.*;
+
+            public class GenericTest {
+
+            public static void main(String[] args) {
+            List<String> name = new ArrayList<String>();
+                    List<Integer> age = new ArrayList<Integer>();
+                            List<Number> number = new ArrayList<Number>();
+
+                                    name.add("icon");
+                                    age.add(18);
+                                    number.add(314);
+
+                                    //getUperNumber(name);//1
+                                    getUperNumber(age);//2
+                                    getUperNumber(number);//3
+
+                                    }
+
+                                    public static void getData(List
+                                    <?> data) {
                     System.out.println("data :" + data.get(0));
                 }
                 
